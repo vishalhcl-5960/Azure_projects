@@ -9,9 +9,10 @@ steps:
   inputs:
     AppSecTestService: 'ASoC_EU'
     applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
-    scanname: 'Check_Issue3'
+    scanname: 'Check_Issue4'
     scantype: 'dynamic'
     dynamicType: 'DASTAPI'
     apiScanType: 'postmanScanning'
-    additionalDomainsAPIScan: 'demo.testfire.net'
+    postmanCollectionFile: 'PostmanCollection.json'
+    additionalDomainsAPIScan: 'demo.testfire.net, testfire.net, a.com, b.com, c.com, d.com'
     networkAPIScan: 'public'
