@@ -9,11 +9,11 @@ steps:
   inputs:
     AppSecTestService: 'ASoC_EU'
     applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
-    scanname: 'Usecase5'
+    scanname: 'Wrong_file_Environment'
     scantype: 'dynamic'
     dynamicType: 'DASTAPI'
     apiScanType: 'postmanScanning'
     postmanCollectionFile: 'PostmanCollection.json'
     additionalDomainsAPIScan: 'demo.testfire.net'
-    apiAuthentication: 'Record'
+    postmanEnvironmentFile: 'PostmanAdditionalFile.zip'
     networkAPIScan: 'public'
