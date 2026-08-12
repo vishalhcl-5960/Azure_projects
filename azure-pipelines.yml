@@ -9,8 +9,9 @@ steps:
   inputs:
     AppSecTestService: 'ASoC_EU'
     applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
-    scanname: 'check_Issue1'
+    scanname: 'Check_Issue2'
     scantype: 'dynamic'
     dynamicType: 'DASTAPI'
     apiScanType: 'postmanScanning'
+    postmanCollectionFile: 'PostmanCollection.json'
     networkAPIScan: 'public'
