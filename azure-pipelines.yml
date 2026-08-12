@@ -9,7 +9,7 @@ steps:
   inputs:
     AppSecTestService: 'ASoC_EU'
     applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
-    scanname: 'Wrong_file_Environment'
+    scanname: 'check_workflow'
     scantype: 'dynamic'
     dynamicType: 'DASTAPI'
     apiScanType: 'postmanScanning'
@@ -17,3 +17,6 @@ steps:
     additionalDomainsAPIScan: 'demo.testfire.net'
     postmanEnvironmentFile: 'PostmanAdditionalFile.zip'
     networkAPIScan: 'public'
+    intervention: false
+
+    
