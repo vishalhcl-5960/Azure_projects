@@ -5,18 +5,18 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: HCLAppScanOnCloud@2
-  inputs:
-    AppSecTestService: 'ASoC_EU'
-    applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
-    scanname: 'check_workflow'
-    scantype: 'dynamic'
-    dynamicType: 'DASTAPI'
-    apiScanType: 'postmanScanning'
-    postmanCollectionFile: 'PostmanCollection.json'
-    additionalDomainsAPIScan: 'demo.testfire.net'
-    postmanEnvironmentFile: 'PostmanAdditionalFile.zip'
-    networkAPIScan: 'public'
-    intervention: false
+    - task: HCLAppScanOnCloud@2
+      inputs:
+        AppSecTestService: 'ASoC_EU'
+        applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
+        scanname: 'Check_Normal'
+        scantype: 'dynamic'
+        dynamicType: 'DAST'
+        scanURL: 'http://demo.testfire.net/'
+        loginMethod: 'Required'
+        dynamicuser: 'jsmith'
+        dynamicloginpassword: 'demo1234'
+        network: 'public'
+        intervention: false
 
     
