@@ -11,7 +11,7 @@ steps:
     applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
     scanname: 'check_static'
     scantype: 'static'
-    scanloc: '$(Agent.WorkFolder)/Nested/Folder' # Updated slashes and standard code directory
+    scanloc: '$(System.DefaultWorkingDirectory)/Nested/Folder' # Updated slashes and standard code directory
     scanMethod: 'IRX'
     ScanSpeedOptions: 'balanced'
     intervention: false
