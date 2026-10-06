@@ -2,21 +2,19 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: vishalAgent_75
+
 
 steps:
-    - task: HCLAppScanOnCloud@2
-      inputs:
-        AppSecTestService: 'ASoC_EU'
-        applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
-        scanname: 'Check_Normal'
-        scantype: 'dynamic'
-        dynamicType: 'DAST'
-        scanURL: 'http://demo.testfire.net/'
-        loginMethod: 'Required'
-        dynamicuser: 'jsmith'
-        dynamicloginpassword: 'demo1234'
-        network: 'public'
-        intervention: false
+- task: HCLAppScanOnCloudCustom@2
+  inputs:
+    AppSecTestService: 'EU_Prod'
+    applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
+    scanname: 'check_static'
+    scantype: 'static'
+    scanloc: '$(Agent.WorkFolder)\Nested\Folder'
+    scanMethod: 'IRX'
+    ScanSpeedOptions: 'balanced'
+    intervention: false
 
     
