@@ -2,8 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: vishalAgent_75
-
+  name: vishalAgent_75 # Changed from vmImage to name
 
 steps:
 - task: HCLAppScanOnCloudCustom@2
@@ -12,7 +11,7 @@ steps:
     applications: '06076bc5-63d1-4f95-93a6-1c096e664645'
     scanname: 'check_static'
     scantype: 'static'
-    scanloc: '$(Agent.WorkFolder)\Nested\Folder'
+    scanloc: '$(Agent.WorkFolder)/Nested/Folder' # Updated slashes and standard code directory
     scanMethod: 'IRX'
     ScanSpeedOptions: 'balanced'
     intervention: false
